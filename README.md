@@ -99,7 +99,10 @@ poetry --version
 
 7. Run unit test
      python manage.py test product
-
+   
+   ```bash
+   poetry run python manage.py test product
+   ```
 ## Project Structure
 ```
 product_search/
