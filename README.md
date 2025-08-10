@@ -63,10 +63,21 @@ Selecting a Child Category (e.g., MacBooks):
 - Django 4.x
 
 ### Installation
+Install Poetry (if not already installed)
+
+Before proceeding, make sure you have Poetry installed. If you haven’t installed it yet, run:
+```bash
+pip install poetry
+```
+✅ Note: You can check if Poetry is already installed by running:
+```bash
+poetry --version
+```
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/tracyluo/django-product-search.git
-   cd django-product-search
+   cd product_search
    ```
 2. Install dependencies:
    ```bash
@@ -105,6 +116,8 @@ product_search/
         templates/
             product/
                 product_list.html # Product list template
+        tests/
+            test_models.py # unit tests
         static/
             product/
                 product_list.css  # CSS for product list page
