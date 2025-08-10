@@ -1,0 +1,66 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'product/product_list.css' %}">
+
+<div class="container">
+    <h1>Product Search</h1>
+    <form method="get">
+        <div class="form-group">
+            <span class="search-label">Description:</span>
+            <input 
+                type="text" 
+                name="q" 
+                class="form-input" 
+                placeholder="Search description..." 
+                value="{{ query|default_if_none:'' }}"
+            >
+        </div>
+        <div class="form-group">
+            <span class="search-label">Category:</span>
+            <select name="category">
+                <option value="">All Categories</option>
+                {% for cat in categories %}
+                    <option 
+                        value="{{ cat.id }}" 
+                        {% if cat.id|stringformat:"s" == selected_category %}
+                            selected
+                        {% endif %}
+                    >
+                        {{ cat.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="tags">
+            <span class="search-label">Tags:</span>
+            {% for tag in tags %}
+                <label>
+                    <input 
+                        type="checkbox" 
+                        name="tags" 
+                        value="{{ tag.id }}" 
+                        {% if tag.id|stringformat:"s" in selected_tags %}
+                            checked
+                        {% endif %}>
+                    {{ tag.name }}
+                </label>
+            {% endfor %}
+        </div>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    <ul class="product-list">
+        {% for product in products %}
+            <li>
+                <span class="product-title">{{ product.name }}</span><br>
+                <span class="product-meta">{{ product.description }}</span><br>
+                <span class="product-meta">Category: {{ product.category.name }}</span><br>
+                <span class="product-meta">Tags: {{ product.tags.all|join:", " }}</span>
+            </li>
+        {% empty %}
+            <li>No products found.</li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f8fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 32px 40px;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 32px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+    background: #f0f4f8;
+    padding: 16px;
+    border-radius: 6px;
+}
+.form-group {
+    flex-basis: 100%;
+}
+.form-input {
+    min-width: 400px;
+}
+input[type="text"], select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #fff;
+}
+button[type="submit"] {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button[type="submit"]:hover {
+    background: #1e40af;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tags label {
+    background: #e0e7ef;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+ul.product-list {
+    list-style: none;
+    padding: 0;
+}
+ul.product-list li {
+    background: #f9fafb;
+    margin-bottom: 16px;
+    padding: 18px 22px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    border-left: 4px solid #2563eb;
+}
+.product-title {
+    font-size: 1.15rem;
+    color: #2563eb;
+    font-weight: 600;
+}
+.product-meta {
+    color: #555;
+    font-size: 0.98rem;
+    margin-top: 4px;
+}
+.search-label {
+    font-size: 1.15rem;
+    color: #4b505b;
+    font-weight: 600;
+}
