@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-product-search"
+name = "product_search"
 version = "0.1.0"
 description = "Using django build a product searching application"
 authors = ["tracy luo <cui_luo@hotmail.com>"]
